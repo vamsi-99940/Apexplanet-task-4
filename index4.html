@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sree Charitha Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>👩‍💻 My Portfolio</h1>
+  </header>
+
+  <!-- Step Sections (Only one shows at a time) -->
+  <section class="step-section active" id="about">
+    <h2>About Me</h2>
+    <p>I’m a front-end developer passionate about creating responsive websites and apps.</p>
+  </section>
+
+  <section class="step-section" id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Portfolio Website</li>
+      <li>To-Do App</li>
+      <li>Product Filter Page</li>
+    </ul>
+  </section>
+
+  <section class="step-section" id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section class="step-section" id="todo">
+    <h2>📝 To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Add a task..." />
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+  </section>
+
+  <section class="step-section" id="products">
+    <h2>🛍 Product Listing</h2>
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="all">All</option>
+      <option value="clothing">Clothing</option>
+      <option value="electronics">Electronics</option>
+    </select>
+    <select id="sortOption" onchange="sortProducts()">
+      <option value="price">Sort by Price</option>
+      <option value="rating">Sort by Rating</option>
+    </select>
+    <div id="productList" class="product-grid"></div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="navigation-buttons">
+    <button onclick="prevSection()">Previous</button>
+    <button onclick="nextSection()">Next</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
